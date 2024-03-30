@@ -1,0 +1,12 @@
+name: Request Render between 14 minutes
+
+on:
+  schedule:
+    - cron: "*/14 * * * *"
+
+jobs:
+  render-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Products
+        run: curl https://bc-chat.onrender.com
