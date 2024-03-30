@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get Products
-        run: curl https://bc-chat.onrender.com
+        env:
+          API_URL: ${{ secrets.API_URL }} # Utiliza o secret aqui
+        run: curl $API_URL
